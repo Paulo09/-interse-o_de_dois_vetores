@@ -1,0 +1,28 @@
+def intersecao(vetor1, vetor2):
+  """
+  Calcula a interseção de dois vetores.
+
+  Args:
+    vetor1: O primeiro vetor.
+    vetor2: O segundo vetor.
+
+  Returns:
+    Um novo vetor contendo os elementos da interseção.
+  """
+
+  # Convertendo os vetores para conjuntos para aproveitar as operações de conjuntos
+  conjunto1 = set(vetor1)
+  conjunto2 = set(vetor2)
+
+  # Calculando a interseção dos conjuntos
+  intersecao = conjunto1.intersection(conjunto2)
+
+  # Convertendo a interseção de volta para uma lista (vetor)
+  return list(intersecao)
+
+# Exemplo de uso:
+vetor_a = [1, 2, 3, 4, 5]
+vetor_b = [3, 4, 5, 6, 7]
+
+resultado = intersecao(vetor_a, vetor_b)
+print(resultado)  # Saída: [3, 4, 5]
